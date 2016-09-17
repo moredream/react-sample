@@ -73,7 +73,11 @@ const App = class extends Component {
           }}/>
           <Field model="task.priority">
             <label>Priority</label>
-            <input type="text" className="form-control"/>
+            <select   className="form-control">
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
           </Field>
 
           <button className="btn btn-primary">Submit!</button>
