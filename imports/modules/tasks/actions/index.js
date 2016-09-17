@@ -15,6 +15,15 @@ export const subscribe = () => {
   }
 }
 
+
+export function selectFilter(id) {
+  return {
+    type: types.SELECT_FILTER,
+    id: id
+  }
+}
+
+
 export const addTask = (task) => {
   return (dispatch, getState, { Meteor }) => {
     Meteor.call("addTask", task, (err, res) => {

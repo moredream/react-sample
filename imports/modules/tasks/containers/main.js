@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Main from '../components/main';
-import { subscribe, addTask } from  '../actions';
+import { subscribe, addTask, selectFilter } from  '../actions';
 
 // dummy
 class container extends Component {
@@ -23,10 +23,12 @@ const mapState = ({Tasks}) => {
     tasks, count
   }
 }
+
 const mapDispatch = (dispatch, getState) => {
   return {
     subscribe: () => dispatch(subscribe()),
     addTask: (task) => dispatch(addTask(task)),
+    selectFilter: (id) => dispatch(selectFilter(id)),
   }
 }
 export default connect(mapState, mapDispatch)(container)

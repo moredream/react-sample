@@ -12,6 +12,11 @@ export default (state = initState, action) => {
         ...state,
         tasks: action.tasks
       }
+    case "SELECT_FILTER":
+      return {
+        ...state,
+        activeID: action.id
+      }
   }
   return state
 }
